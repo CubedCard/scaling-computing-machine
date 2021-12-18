@@ -11,7 +11,7 @@ import { PageNotFoundComponent } from './components/error/page-not-found/page-no
 import { HeaderComponent } from './components/header/header/header.component';
 
 const appRoutes: Routes = [
-    { path: '', pathMatch: 'full', redirectTo: 'home' },
+    { path: '', pathMatch: 'full', redirectTo: 'home', data: {title: "Jip Derksen | Home"} },
     { path: 'home', component: HomeComponent },
     { path: 'projects', component: ProjectsComponent },
     { path: 'about', component: AboutComponent },
