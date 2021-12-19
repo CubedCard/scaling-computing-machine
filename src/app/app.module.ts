@@ -11,12 +11,12 @@ import { PageNotFoundComponent } from './components/error/page-not-found/page-no
 import { HeaderComponent } from './components/header/header/header.component';
 
 const appRoutes: Routes = [
-    { path: '', pathMatch: 'full', redirectTo: 'home', data: {title: "Jip Derksen | Home"} },
-    { path: 'home', component: HomeComponent },
-    { path: 'projects', component: ProjectsComponent },
-    { path: 'about', component: AboutComponent },
-    { path: 'contact', component: ContactComponent },
-    { path: '**', pathMatch: 'full', component: PageNotFoundComponent }
+    { path: '', pathMatch: 'full', redirectTo: 'home' },
+    { path: 'home', component: HomeComponent, data: {title: "Home"} },
+    { path: 'projects', component: ProjectsComponent, data: {title: "Projects"} },
+    { path: 'about', component: AboutComponent, data: {title: "Whoami"} },
+    { path: 'contact', component: ContactComponent, data: {title: "Contact"} },
+    { path: '**', pathMatch: 'full', component: PageNotFoundComponent, data: {title: "Page Not Found"} }
 ]
 
 @NgModule({
