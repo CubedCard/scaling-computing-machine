@@ -9,6 +9,7 @@ import { Joke } from '../../../models/joke';
     styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+    DELAY: number = 10000;
     setup: string;
     punch: string;
 
@@ -18,26 +19,25 @@ export class HomeComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.getJoke().subscribe((joke: Joke) => {
-            console.log(joke);
-            this.setup = joke.setup;
-            this.punch = joke.delivery;
-        });
+        this.fetchJoke();
         this.startTimedJoke();
     }
 
+    fetchJoke() {
+        this.getJoke().subscribe((joke: Joke) => {
+            this.setup = joke.setup;
+            this.punch = joke.delivery;
+        });
+    }
+
     getJoke(): Observable<Joke> {
-        return this.http.get<Joke>("https://v2.jokeapi.dev/joke/Programming,Christmas?type=twopart");
+        return this.http.get<Joke>("https://v2.jokeapi.dev/joke/Programming,Christmas?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=twopart");
     }
 
     startTimedJoke() {
         setInterval(() => {
-            this.getJoke().subscribe((joke: Joke) => {
-                console.log(joke);
-                this.setup = joke.setup;
-                this.punch = joke.delivery;
-            });
-        }, 7000); 
+            this.fetchJoke();
+        }, this.DELAY); 
     }
 
 }
