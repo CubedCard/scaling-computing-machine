@@ -12,6 +12,7 @@ export class HomeComponent implements OnInit {
     DELAY: number = 10000;
     setup: string;
     punch: string;
+    interval: any;
 
     constructor(private http: HttpClient) { 
         this.setup = "";
@@ -35,9 +36,13 @@ export class HomeComponent implements OnInit {
     }
 
     startTimedJoke() {
-        setInterval(() => {
+        this.interval = setInterval(() => {
             this.fetchJoke();
         }, this.DELAY); 
+    }
+
+    ngOnDestroy(): void {
+        clearInterval(this.interval);
     }
 
 }
