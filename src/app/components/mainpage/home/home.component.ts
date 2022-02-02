@@ -32,7 +32,7 @@ export class HomeComponent implements OnInit {
     }
 
     getJoke(): Observable<Joke> {
-        return this.http.get<Joke>("https://v2.jokeapi.dev/joke/Programming,Christmas?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=twopart");
+        return this.http.get<Joke>("https://v2.jokeapi.dev/joke/Programming?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=twopart");
     }
 
     startTimedJoke() {
