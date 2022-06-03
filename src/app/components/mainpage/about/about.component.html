@@ -2,8 +2,8 @@
 
 <div class="w-100 d-flex justify-content-center mt-5 flex-sm-row flex-column">
     <p class="col-md-3 links m-2">
-        Hi, my name is Jip Derksen and I'm a 18 year old software engineering student 
-        at the Amsterdam University of Applied Sciences.
+        Hi, my name is Jip Derksen and I'm a {{ age }} year old software engineering student at the Amsterdam University
+        of Applied Sciences.
     </p>
     <img src="../../../../assets/me.jpeg" class="image m-2" alt="picture of me">
 </div>
@@ -14,47 +14,11 @@
     </div>
     <div class="w-sm-50 links">
         <ul>
-            <li>
+            <li *ngFor="let skill of skills">
                 <span class="material-icons align-bottom rotate">
                     rocket
                 </span> 
-                Java
-            </li>
-            <li>
-                <span class="material-icons align-bottom rotate">
-                    rocket
-                </span> 
-                Object Oriented Programming
-            </li>
-            <li>
-                <span class="material-icons align-bottom rotate">
-                    rocket
-                </span> 
-                Python
-            </li>
-            <li>
-                <span class="material-icons align-bottom rotate">
-                    rocket
-                </span> 
-                JavaScript
-            </li>
-            <li>
-                <span class="material-icons align-bottom rotate">
-                    rocket
-                </span> 
-                Angular
-            </li>
-            <li>
-                <span class="material-icons align-bottom rotate">
-                    rocket
-                </span> 
-                Algorithms and Data Structures
-            </li>
-            <li>
-                <span class="material-icons align-bottom rotate">
-                    rocket
-                </span> 
-                Spring Boot
+                {{ skill }}
             </li>
         </ul>
     </div>

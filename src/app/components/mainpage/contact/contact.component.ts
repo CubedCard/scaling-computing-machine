@@ -15,7 +15,7 @@ export class ContactComponent implements OnInit {
     constructor() {
         this.email = "jip.derksen@hva.nl";
         this.tel = "+31 6 12345678";
-        this.linkedIn = "https://www.linkedin.com/in/jip-derksen-5b90a220a/";
+        this.linkedIn = "https://www.linkedin.com/in/jipderksen";
         this.insta = "https://www.instagram.com/jipderksen";
         this.github = "https://www.github.com/CubedCard";
     }

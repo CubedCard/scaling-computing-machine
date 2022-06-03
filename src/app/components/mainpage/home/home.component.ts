@@ -9,7 +9,7 @@ import { Joke } from '../../../models/joke';
     styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-    DELAY: number = 10000;
+    readonly DELAY: number = 10000;
     setup: string;
     punch: string;
     interval: any;
@@ -31,11 +31,15 @@ export class HomeComponent implements OnInit {
         });
     }
 
-    getJoke(): Observable<Joke> {
+    jokeSource(): void {
+        window.open('https://v2.jokeapi.dev/', '_blank');
+    }
+
+    private getJoke(): Observable<Joke> {
         return this.http.get<Joke>("https://v2.jokeapi.dev/joke/Programming?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=twopart");
     }
 
-    startTimedJoke() {
+    private startTimedJoke() {
         this.interval = setInterval(() => {
             this.fetchJoke();
         }, this.DELAY); 
