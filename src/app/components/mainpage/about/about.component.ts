@@ -14,10 +14,14 @@ export class AboutComponent implements OnInit {
         this.age = Math.floor((timeDiff / (1000 * 3600 * 24))/365);
         this.skills = [
             "Java",
+            "Python",
             "Angular",
             "Spring Boot",
-            "Algorithms and Data Structures",
             "Docker",
+            "Algorithms and Data Structures",
+            "Object Oriented Programming",
+            "REST APIs",
+            "ViM",
         ];
 
     }
