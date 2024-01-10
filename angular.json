@@ -109,5 +109,8 @@
       }
     }
   },
-  "defaultProject": "portfolio-wesite"
+  "defaultProject": "portfolio-wesite",
+  "cli": {
+    "analytics": false
+  }
 }
