@@ -28,7 +28,7 @@
     "@angular-devkit/build-angular": "^17.2.2",
     "@angular/cli": "^17.2.2",
     "@angular/compiler-cli": "~17.2.3",
-    "@types/jasmine": "~3.8.0",
+    "@types/jasmine": "~5.1.4",
     "@types/node": "^20.11.23",
     "express-rate-limit": "^7.2.0",
     "jasmine-core": "~3.8.0",
