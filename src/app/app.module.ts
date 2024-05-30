@@ -9,7 +9,7 @@ import { ProjectsComponent } from './components/mainpage/projects/projects.compo
 import { Routes, RouterModule } from '@angular/router';
 import { PageNotFoundComponent } from './components/error/page-not-found/page-not-found.component';
 import { HeaderComponent } from './components/header/header/header.component';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 const appRoutes: Routes = [
     { path: '', pathMatch: 'full', redirectTo: 'home' },
@@ -20,22 +20,15 @@ const appRoutes: Routes = [
     { path: '**', pathMatch: 'full', component: PageNotFoundComponent, data: {title: "Page Not Found"} }
 ]
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    AboutComponent,
-    ContactComponent,
-    ProjectsComponent,
-    PageNotFoundComponent,
-    HeaderComponent
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    RouterModule.forRoot(appRoutes)
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        HomeComponent,
+        AboutComponent,
+        ContactComponent,
+        ProjectsComponent,
+        PageNotFoundComponent,
+        HeaderComponent
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        RouterModule.forRoot(appRoutes)], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }
