@@ -16,12 +16,16 @@ export class AboutComponent implements OnInit {
             "Java",
             "Python",
             "Angular",
-            "Spring Boot",
             "Docker",
             "Algorithms and Data Structures",
             "Object Oriented Programming",
             "REST APIs",
             "ViM",
+            "Git",
+            "Linux",
+            "SQL and NoSQL Databases",
+            "HTML, CSS and JavaScript",
+            "C#",
         ];
 
     }
