@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 # Info
 
-Hi, I am Jip Derksen, an enthousiastic backend software engineer(ing student) and this is my portfolio website.
+Hi, I am Jip Derksen, an enthousiastic backend software engineer and this is my portfolio website.
 
 ## Development server
 
