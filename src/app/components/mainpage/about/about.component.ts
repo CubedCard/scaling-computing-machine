@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
     selector: 'app-about',
     templateUrl: './about.component.html',
     styleUrls: ['./about.component.css']
 })
-export class AboutComponent implements OnInit {
+export class AboutComponent {
     age: number;
     skills: string[];
 
@@ -28,9 +28,6 @@ export class AboutComponent implements OnInit {
             "SQL and NoSQL Databases",
             "HTML, CSS and JavaScript"
         ];
-    }
-    
-    ngOnInit(): void {
     }
 
 }
