@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
     selector: 'app-about',
     templateUrl: './about.component.html',
     styleUrls: ['./about.component.css']
 })
-export class AboutComponent implements OnInit {
+export class AboutComponent {
     age: number;
     skills: string[];
 
@@ -15,7 +15,9 @@ export class AboutComponent implements OnInit {
         this.skills = [
             "Java",
             "Python",
+            "C#",
             "Angular",
+            "Blazor",
             "Docker",
             "Algorithms and Data Structures",
             "Object Oriented Programming",
@@ -24,13 +26,8 @@ export class AboutComponent implements OnInit {
             "Git",
             "Linux",
             "SQL and NoSQL Databases",
-            "HTML, CSS and JavaScript",
-            "C#",
+            "HTML, CSS and JavaScript"
         ];
-
-    }
-
-    ngOnInit(): void {
     }
 
 }
