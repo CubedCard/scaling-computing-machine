@@ -27,7 +27,7 @@
   "devDependencies": {
     "@angular-devkit/build-angular": "^20.0.0",
     "@angular/cli": "^20.0.0",
-    "@angular/compiler-cli": "~19.2.13",
+    "@angular/compiler-cli": "~20.0.0",
     "@types/jasmine": "~5.1.8",
     "@types/node": "^22.15.24",
     "express-rate-limit": "^7.5.0",
