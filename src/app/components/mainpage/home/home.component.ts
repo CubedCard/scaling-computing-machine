@@ -31,10 +31,6 @@ export class HomeComponent implements OnInit {
         });
     }
 
-    jokeSource(): void {
-        window.open('https://v2.jokeapi.dev/', '_blank');
-    }
-
     private getJoke(): Observable<Joke> {
         return this.http.get<Joke>("https://v2.jokeapi.dev/joke/Programming?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=twopart");
     }
