@@ -39,5 +39,9 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.8.3",
     "webpack-dev-middleware": "^7.4.2"
+  },
+  "overrides": {
+    "ora": "5.4.1"
   }
 }
+
