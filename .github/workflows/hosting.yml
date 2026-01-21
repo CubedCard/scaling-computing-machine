@@ -34,4 +34,5 @@ jobs:
           --allow-unauthenticated \
           --cpu 1 \
           --max-instances 3 \
-          --memory 256Mi
+          --memory 256Mi \
+          --concurrency 80
