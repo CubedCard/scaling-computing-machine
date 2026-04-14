@@ -1,5 +1,5 @@
 from flask import Flask, request, redirect
-from routes.pages import register_routes, term_pages, html_pages, wants_html
+from routes.pages import register_routes, term_pages, wants_html
 
 app = Flask(__name__)
 
