@@ -1,14 +1,16 @@
-from flask import Flask, redirect
-from routes.pages import register_routes
+from flask import Flask, request, redirect
+from routes.pages import register_routes, term_pages, html_pages, wants_html
 
 app = Flask(__name__)
 
 # register all routes
 register_routes(app)
 
-@app.route('/<name>')
+@app.route('/<path:name>')
 def match_all(name=None):
-    return redirect("/", code=302)
+    if wants_html(request):
+        return redirect("/", code=302)
+    return term_pages["index"]()
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8080)
