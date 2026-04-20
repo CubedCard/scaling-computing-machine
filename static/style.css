@@ -64,3 +64,7 @@ footer {
   color: var(--muted);
   font-size: 0.9rem;
 }
+
+a {
+    color: #03ad25;
+}
