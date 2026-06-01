@@ -83,6 +83,9 @@ I like systems that explain themselves.
 
 def t_contact():
     body = f"""
+{GREEN}Email{RESET}
+  jipderksen@gmail.com
+
 {GREEN}GitHub{RESET}
   https://github.com/CubedCard
 
@@ -156,6 +159,7 @@ def h_contact():
 <h1>Contact</h1>
 
 <div class="card">
+  <p><a href="mailto:jipderksen@gmail.com">jipderksen@gmail.com</a></p>
   <p><a href="https://github.com/CubedCard">GitHub</a></p>
   <p><a href="https://www.instagram.com/jipderksen/">Instagram</a></p>
   <p><a href="https://twitter.com/jippurt">Twitter</a></p>
