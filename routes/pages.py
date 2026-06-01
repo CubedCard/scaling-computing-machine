@@ -83,14 +83,14 @@ I like systems that explain themselves.
 
 def t_contact():
     body = f"""
-{GREEN}Email{RESET}
-  jip@example.com
-
 {GREEN}GitHub{RESET}
   https://github.com/CubedCard
 
+{GREEN}Instagram{RESET}
+  https://www.instagram.com/jipderksen
+
 {GREEN}Twitter{RESET}
-  @jippurt
+  https://twitter.com/jippurt
 """
     return Response(section("Contact", body), mimetype="text/plain")
 
@@ -156,9 +156,9 @@ def h_contact():
 <h1>Contact</h1>
 
 <div class="card">
-  <p>Email: jip@example.com</p>
   <p><a href="https://github.com/CubedCard">GitHub</a></p>
-  <p>Twitter: @jippurt</p>
+  <p><a href="https://www.instagram.com/jipderksen/">Instagram</a></p>
+  <p><a href="https://twitter.com/jippurt">Twitter</a></p>
 </div>
 """
     return render_page("Contact", body)
